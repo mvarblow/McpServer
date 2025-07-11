@@ -12,6 +12,10 @@ jobs:
       with:
         dotnet-version: 9.0.x
     - name: Log into GitHub Container Registry
-      run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login https://ghcr.io -u ${{ github.actor }} --password-stdin
+      uses: docker/login-action@v3
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     - name: Publish container
       run: dotnet publish ./src --arch x64 --os linux -p:PublishProfile=DefaultContainer
