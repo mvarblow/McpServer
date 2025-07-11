@@ -1,6 +1,4 @@
-using McpServer;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
+using McpServer.Tools;
 
 var builder = WebApplication.CreateBuilder(args);
 

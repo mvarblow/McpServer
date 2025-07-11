@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using ModelContextProtocol.Server;
 
-namespace McpServer;
+namespace McpServer.Tools;
 
 [McpServerToolType]
 public class TimeTool
